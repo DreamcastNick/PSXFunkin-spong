@@ -4,8 +4,8 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef PSXF_GUARD_SPEAKER_H
-#define PSXF_GUARD_SPEAKER_H
+#ifndef _SPEAKER_H
+#define _SPEAKER_H
 
 #include "../gfx.h"
 #include "../fixed.h"
@@ -21,6 +21,6 @@ typedef struct
 //Speaker functions
 void Speaker_Init(Speaker *this);
 void Speaker_Bump(Speaker *this);
-void Speaker_Tick(Speaker *this, fixed_t x, fixed_t y, fixed_t parallax);
+void Speaker_Tick(Speaker *this, fixed_t x, fixed_t y);
 
 #endif
