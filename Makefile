@@ -25,26 +25,31 @@ SRCS = src/main.c \
        src/stage/week5.c \
        src/stage/week6.c \
        src/stage/week7.c \
+       src/stage/week8.c \
+       src/stage/week9.c \
        src/animation.c \
        src/character.c \
        src/character/bf.c \
+       src/character/bfmic.c \
        src/character/bfweeb.c \
        src/character/speaker.c \
-       src/character/dad.c \
        src/character/spong.c \
        src/character/spong2.c \
-       src/character/spook.c \
-       src/character/pico.c \
-       src/character/mom.c \
-       src/character/xmasbf.c \
-       src/character/xmasp.c \
-       src/character/senpai.c \
-       src/character/senpaim.c \
-       src/character/spirit.c \
-       src/character/tank.c \
+       src/character/utspong.c \
+       src/character/spong3.c \
+       src/character/sad.c \
+       src/character/hellno.c \
+       src/character/sp.c \
+       src/character/old.c \
+       src/character/old2.c \
+       src/character/old3.c \
+       src/character/older.c \
+       src/character/older2.c \
+       src/character/p1spong.c \
+       src/character/viacom.c \
        src/character/gf.c \
+       src/character/gf2.c \
        src/character/gfweeb.c \
-       src/character/clucky.c \
        src/object.c \
        src/object/combo.c \
        src/object/splash.c \

@@ -52,22 +52,25 @@ static const u8 note_anims[4][3] = {
 
 //Stage definitions
 #include "character/bf.h"
+#include "character/bfmic.h"
 #include "character/bfweeb.h"
-#include "character/dad.h"
 #include "character/spong.h"
 #include "character/spong2.h"
-#include "character/spook.h"
-#include "character/pico.h"
-#include "character/mom.h"
-#include "character/xmasbf.h"
-#include "character/xmasp.h"
-#include "character/senpai.h"
-#include "character/senpaim.h"
-#include "character/spirit.h"
-#include "character/tank.h"
+#include "character/utspong.h"
+#include "character/spong3.h"
+#include "character/sad.h"
+#include "character/hellno.h"
+#include "character/sp.h"
+#include "character/old.h"
+#include "character/old2.h"
+#include "character/old3.h"
+#include "character/older.h"
+#include "character/older2.h"
+#include "character/p1spong.h"
+#include "character/viacom.h"
 #include "character/gf.h"
+#include "character/gf2.h"
 #include "character/gfweeb.h"
-#include "character/clucky.h"
 
 #include "stage/dummy.h"
 #include "stage/week1.h"
@@ -77,6 +80,8 @@ static const u8 note_anims[4][3] = {
 #include "stage/week5.h"
 #include "stage/week6.h"
 #include "stage/week7.h"
+#include "stage/week8.h"
+#include "stage/week9.h"
 
 static const StageDef stage_defs[StageId_Max] = {
 	#include "stagedef_disc1.h"
@@ -139,13 +144,6 @@ static void Stage_ScrollCamera(void)
 		stage.camera.x += FIXED_MUL(dx, stage.camera.td);
 		stage.camera.y += FIXED_MUL(dy, stage.camera.td);
 		stage.camera.zoom += FIXED_MUL(dz, stage.camera.td);
-		
-		//Shake in Week 4
-		if (stage.stage_id >= StageId_4_1 && stage.stage_id <= StageId_4_3)
-		{
-			stage.camera.x += RandomRange(FIXED_DEC(-1,10),FIXED_DEC(1,10));
-			stage.camera.y += RandomRange(FIXED_DEC(-25,100),FIXED_DEC(25,100));
-		}
 	#endif
 	
 	//Update other camera stuff
@@ -709,16 +707,16 @@ static void Stage_DrawHealth(s16 health, u8 i, s8 ox)
 		dying = (health <= 2000) * 36;
 	
 	//Get src and dst
-	fixed_t hx = (192 << FIXED_SHIFT) * (10000 - health) / 10000;
+	fixed_t hx = (128 << FIXED_SHIFT) * (10000 - health) / 10000;
 	RECT src = {
 		(i % 3) * 72 + dying,
-		24 + (i / 3) * 36,
+		18 + (i / 3) * 36,
 		36,
 		36
 	};
 	RECT_FIXED dst = {
-		hx + ox * FIXED_DEC(11,1) - FIXED_DEC(24,1),
-		FIXED_DEC(SCREEN_HEIGHT2 - 32 + 4 - 24, 1),
+		hx + ox * FIXED_DEC(16,1) - FIXED_DEC(24,1),
+		FIXED_DEC(SCREEN_HEIGHT2 - 36 + 4 - 18, 1),
 		src.w << FIXED_SHIFT,
 		src.h << FIXED_SHIFT
 	};

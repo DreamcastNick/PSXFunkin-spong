@@ -77,10 +77,10 @@ static const CharFrame char_spong_frame[] = {
 	{Spong_ArcMain_UpB0, {   0,   0,  256, 256}, { 125, 250}}, //16 up b 1
 	{Spong_ArcMain_UpB1, {   0,   0,  256, 256}, { 125, 250}}, //17 up b 2
 	
-	{Spong_ArcMain_RightA0, {  0,   0, 256, 256}, { 104, 250}}, //18 right a 1
-	{Spong_ArcMain_RightA1, {  0,   0, 256, 256}, { 104, 250}}, //19 right a 2
-	{Spong_ArcMain_RightB0, {  0,   0, 256, 256}, { 104, 250}}, //20 right b 1
-	{Spong_ArcMain_RightB1, {  0,   0, 256, 256}, { 104, 250}}, //21 right b 2
+	{Spong_ArcMain_RightA0, {  0,   0, 256, 256}, { 125, 250}}, //18 right a 1
+	{Spong_ArcMain_RightA1, {  0,   0, 256, 256}, { 125, 250}}, //19 right a 2
+	{Spong_ArcMain_RightB0, {  0,   0, 256, 256}, { 125, 250}}, //20 right b 1
+	{Spong_ArcMain_RightB1, {  0,   0, 256, 256}, { 125, 250}}, //21 right b 2
 };
 
 static const Animation char_spong_anim[CharAnim_Max] = {

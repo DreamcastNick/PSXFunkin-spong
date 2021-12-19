@@ -76,14 +76,14 @@ static const CharFrame char_spong2_frame[] = {
 	{Spong2_ArcMain_UpB0, {   0,   0,  256, 256}, { 125, 250}}, //14 up b 1
 	{Spong2_ArcMain_UpB1, {   0,   0,  256, 256}, { 125, 250}}, //15 up b 2
 	
-	{Spong2_ArcMain_RightA0, {  0,   0, 256, 256}, { 104, 250}}, //16 right a 1
-	{Spong2_ArcMain_RightA1, {  0,   0, 256, 256}, { 104, 250}}, //17 right a 2
-	{Spong2_ArcMain_RightB0, {  0,   0, 256, 256}, { 104, 250}}, //18 right b 1
-	{Spong2_ArcMain_RightB1, {  0,   0, 256, 256}, { 104, 250}}, //19 right b 2
+	{Spong2_ArcMain_RightA0, {  0,   0, 256, 256}, { 125, 250}}, //16 right a 1
+	{Spong2_ArcMain_RightA1, {  0,   0, 256, 256}, { 125, 250}}, //17 right a 2
+	{Spong2_ArcMain_RightB0, {  0,   0, 256, 256}, { 125, 250}}, //18 right b 1
+	{Spong2_ArcMain_RightB1, {  0,   0, 256, 256}, { 125, 250}}, //19 right b 2
 
-	{Spong2_ArcMain_Scream0, {  0,   0, 256, 256}, { 104, 250}}, //20 scream 1
-	{Spong2_ArcMain_Scream1, {  0,   0, 256, 256}, { 104, 250}}, //21 scream 2
-	{Spong2_ArcMain_Scream2, {  0,   0, 256, 256}, { 104, 250}}, //22 scream 3
+	{Spong2_ArcMain_Scream0, {  0,   0, 256, 256}, { 125, 250}}, //20 scream 1
+	{Spong2_ArcMain_Scream1, {  0,   0, 256, 256}, { 125, 250}}, //21 scream 2
+	{Spong2_ArcMain_Scream2, {  0,   0, 256, 256}, { 125, 250}}, //22 scream 3
 };
 
 static const Animation char_spong2_anim[CharAnim_Max] = {
@@ -96,7 +96,7 @@ static const Animation char_spong2_anim[CharAnim_Max] = {
 	{2, (const u8[]){14, 15, 14, ASCR_BACK, 1}},                               //CharAnim_UpAlt
 	{2, (const u8[]){16, 17, 16, ASCR_BACK, 1}},  				   //CharAnim_Right
 	{2, (const u8[]){18, 19, 18, ASCR_BACK, 1}},                               //CharAnim_RightAlt
-	{2, (const u8[]){20, 21, 22, 21, ASCR_BACK, 1}},                           //CharAnim_Scream
+	{2, (const u8[]){20, 21, 22, ASCR_CHGANI, 1}},                         //CharAnim_Scream
 };
 
 //Spong2 character functions
@@ -164,7 +164,7 @@ Character *Char_Spong2_New(fixed_t x, fixed_t y)
 	Character_Init((Character*)this, x, y);
 	
 	//Set character stage information
-	this->character.health_i = 1;
+	this->character.health_i = 2;
 	
 	this->character.focus_x = FIXED_DEC(25,1);
 	this->character.focus_y = FIXED_DEC(-90,1);

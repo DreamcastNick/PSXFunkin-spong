@@ -19,7 +19,7 @@
 		<directory_tree>
 			<!-- System -->
 			<file name = "system.cnf" type = "data" source = "iso/system.cnf"/>
-			<file name = "SCUS_000.00" type = "data" source = "funkin.ps-exe"/>
+			<file name = "SCUS_501.99" type = "data" source = "funkin.ps-exe"/>
 			
 			<!-- Menu assets -->
 			<dir name = "menu">
@@ -61,6 +61,10 @@
 				<file name = "1.4e.cht" type = "data" source = "iso/chart/tutorial-easy.json.cht"/>
 				<file name = "1.4n.cht" type = "data" source = "iso/chart/tutorial.json.cht"/>
 				<file name = "1.4h.cht" type = "data" source = "iso/chart/tutorial-hard.json.cht"/>
+				<!-- Serpent charts -->
+				<file name = "1.5e.cht" type = "data" source = "iso/chart/serpent-easy.json.cht"/>
+				<file name = "1.5n.cht" type = "data" source = "iso/chart/serpent.json.cht"/>
+				<file name = "1.5h.cht" type = "data" source = "iso/chart/serpent-hard.json.cht"/>
 			</dir>
 			
 			<!-- Week 2 assets -->
@@ -122,7 +126,9 @@
 				<file name = "4.3n.cht" type = "data" source = "iso/chart/milf.json.cht"/>
 				<file name = "4.3h.cht" type = "data" source = "iso/chart/milf-hard.json.cht"/>
 				<!-- Test charts -->
+				<file name = "4.4e.cht" type = "data" source = "iso/chart/test-easy.json.cht"/>
 				<file name = "4.4n.cht" type = "data" source = "iso/chart/test.json.cht"/>
+				<file name = "4.4h.cht" type = "data" source = "iso/chart/test-hard.json.cht"/>
 			</dir>
 			
 			<!-- Week 5 assets -->
@@ -183,7 +189,19 @@
 				<file name = "7.3h.cht" type = "data" source = "iso/chart/stress-hard.json.cht"/>
 				<file name = "7.3p.cht" type = "data" source = "iso/week7/picospeaker.json.cht"/>
 			</dir>
-			
+
+			<!-- Week 8 assets -->
+			<dir name = "week8">
+				<!-- Background art -->
+				<file name = "back.arc" type = "data" source = "iso/week8/back.arc"/>
+			</dir>			
+
+			<!-- Week 9 assets -->
+			<dir name = "week9">
+				<!-- Background art -->
+				<file name = "back.arc" type = "data" source = "iso/week9/back.arc"/>
+			</dir>	
+
 			<!-- Kapi assets -->
 			<dir name = "kapi">
 				<!-- Wocky charts -->
@@ -219,13 +237,9 @@
 				<!-- Boyfriend assets -->
 				<file name = "bf.arc" type = "data" source = "iso/bf/main.arc"/>
 				<file name = "bfdead.arc" type = "data" source = "iso/bf/dead.arc"/>
+				<file name = "bfmic.arc" type = "data" source = "iso/bfmic/main.arc"/>
+				<file name = "micded.arc" type = "data" source = "iso/bfmic/dead.arc"/>
 				<file name = "bfweeb.arc" type = "data" source = "iso/bf/weeb.arc"/>
-				
-				<!-- Dad assets -->
-				<file name = "dad.arc" type = "data" source = "iso/dad/main.arc"/>
-				
-				<!-- Spook assets -->
-				<file name = "spook.arc" type = "data" source = "iso/spook/main.arc"/>
 
 				<!-- Spong assets -->
 				<file name = "spong.arc" type = "data" source = "iso/spong/main.arc"/>				
@@ -233,33 +247,47 @@
 				<!-- Spong2 assets -->
 				<file name = "spong2.arc" type = "data" source = "iso/spong2/main.arc"/>
 
-				<!-- Pico assets -->
-				<file name = "pico.arc" type = "data" source = "iso/pico/main.arc"/>
-				
-				<!-- Mom assets -->
-				<file name = "mom.arc" type = "data" source = "iso/mom/main.arc"/>
-				<file name = "momhair.tim" type = "data" source = "iso/mom/hair.tim"/>
-				
-				<!-- Christmas assets -->
-				<file name = "xmasbf.arc" type = "data" source = "iso/bf/xmas.arc"/>
-				<file name = "xmasp.arc" type = "data" source = "iso/xmasp/main.arc"/>
-				
-				<!-- Senpai assets -->
-				<file name = "senpai.arc" type = "data" source = "iso/senpai/main.arc"/>
-				<file name = "senpaim.arc" type = "data" source = "iso/senpaim/main.arc"/>
-				<file name = "spirit.arc" type = "data" source = "iso/spirit/main.arc"/>
-				
-				<!-- Tankman Captain assets -->
-				<file name = "tank.arc" type = "data" source = "iso/tank/main.arc"/>
-				<file name = "tankugh.arc" type = "data" source = "iso/tank/ugh.arc"/>
-				<file name = "tankgood.arc" type = "data" source = "iso/tank/good.arc"/>
-				
+				<!-- UTSpong assets -->
+				<file name = "utspong.arc" type = "data" source = "iso/utspong/main.arc"/>
+
+				<!-- Spong3 assets -->
+				<file name = "spong3.arc" type = "data" source = "iso/spong3/main.arc"/>
+
+				<!-- Sad assets -->
+				<file name = "sad.arc" type = "data" source = "iso/sad/main.arc"/>
+
+				<!-- HellNo assets -->
+				<file name = "hellno.arc" type = "data" source = "iso/hellno/main.arc"/>
+
+				<!-- SP assets -->
+				<file name = "sp.arc" type = "data" source = "iso/sp/main.arc"/>
+
+				<!-- Old assets -->
+				<file name = "old.arc" type = "data" source = "iso/old/main.arc"/>
+
+				<!-- Old2 assets -->
+				<file name = "old2.arc" type = "data" source = "iso/old2/main.arc"/>
+
+				<!-- Old3 assets -->
+				<file name = "old3.arc" type = "data" source = "iso/old3/main.arc"/>
+
+				<!-- Older assets -->
+				<file name = "older.arc" type = "data" source = "iso/older/main.arc"/>
+
+				<!-- Older2 assets -->
+				<file name = "older2.arc" type = "data" source = "iso/older2/main.arc"/>
+
+				<!-- P1Spong assets -->
+				<file name = "p1spong.arc" type = "data" source = "iso/p1spong/main.arc"/>
+
+				<!-- Viacom assets -->
+				<file name = "viacom.arc" type = "data" source = "iso/viacom/main.arc"/>
+
 				<!-- Girlfriend assets -->
 				<file name = "gf.arc" type = "data" source = "iso/gf/main.arc"/>
 				<file name = "speaker.tim" type = "data" source = "iso/gf/speaker.tim"/>
-				
-				<!-- Clucky assets -->
-				<file name = "clucky.arc" type = "data" source = "iso/clucky/main.arc"/>
+				<file name = "gf2.arc" type = "data" source = "iso/gf2/main.arc"/>
+				<file name = "speaker2.tim" type = "data" source = "iso/gf2/speaker.tim"/>
 			</dir>
 			
 			<!-- Music -->
@@ -269,6 +297,8 @@
 				<file name = "week1a.xa" type = "xa" source = "iso/music/week1a.xa"/>
 				<dummy sectors="128"/>
 				<file name = "week1b.xa" type = "xa" source = "iso/music/week1b.xa"/>
+				<dummy sectors="128"/>
+				<file name = "week1c.xa" type = "xa" source = "iso/music/week1c.xa"/>
 				<dummy sectors="128"/>
 				<file name = "week2a.xa" type = "xa" source = "iso/music/week2a.xa"/>
 				<dummy sectors="128"/>
@@ -283,24 +313,6 @@
 				<file name = "week4b.xa" type = "xa" source = "iso/music/week4b.xa"/>
 				<dummy sectors="128"/>
 				<file name = "week5a.xa" type = "xa" source = "iso/music/week5a.xa"/>
-				<dummy sectors="128"/>
-				<file name = "week5b.xa" type = "xa" source = "iso/music/week5b.xa"/>
-				<dummy sectors="128"/>
-				<file name = "week6a.xa" type = "xa" source = "iso/music/week6a.xa"/>
-				<dummy sectors="128"/>
-				<file name = "week6b.xa" type = "xa" source = "iso/music/week6b.xa"/>
-				<dummy sectors="128"/>
-				<file name = "week7a.xa" type = "xa" source = "iso/music/week7a.xa"/>
-				<dummy sectors="128"/>
-				<file name = "week7b.xa" type = "xa" source = "iso/music/week7b.xa"/>
-				<dummy sectors="128"/>
-				<file name = "kapia.xa" type = "xa" source = "iso/music/kapia.xa"/>
-				<dummy sectors="128"/>
-				<file name = "kapib.xa" type = "xa" source = "iso/music/kapib.xa"/>
-				<dummy sectors="128"/>
-				<file name = "clwna.xa" type = "xa" source = "iso/music/clwna.xa"/>
-				<dummy sectors="128"/>
-				<file name = "clwnb.xa" type = "xa" source = "iso/music/clwnb.xa"/>
 				<dummy sectors="128"/>
 			</dir>
 			

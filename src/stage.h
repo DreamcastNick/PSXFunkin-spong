@@ -19,8 +19,6 @@
 #include "network.h"
 
 //Stage constants
-#define STAGE_PERFECT //Play all notes perfectly
-
 #define INPUT_LEFT  (PAD_LEFT  | PAD_SQUARE | PAD_R2)
 #define INPUT_DOWN  (PAD_DOWN  | PAD_CROSS | PAD_R1)
 #define INPUT_UP    (PAD_UP    | PAD_TRIANGLE | PAD_L1)
@@ -43,6 +41,7 @@ typedef enum
 	StageId_1_2, //Fresh
 	StageId_1_3, //Dadbattle
 	StageId_1_4, //Tutorial
+	StageId_1_5, //Serpent
 	
 	StageId_2_1, //Spookeez
 	StageId_2_2, //South
@@ -85,7 +84,7 @@ typedef enum
 	StageId_Max
 } StageId;
 
-#define StageId_LastVanilla StageId_7_3
+#define StageId_LastVanilla StageId_5_1
 
 typedef enum
 {

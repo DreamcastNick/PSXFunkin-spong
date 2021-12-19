@@ -81,17 +81,17 @@ typedef struct
 
 //Boyfriend player definitions
 static const CharFrame char_bf_frame[] = {
-	{BF_ArcMain_BF0, { 10,   7,  95,  97}, { 54,  92}}, //0 idle 1
-	{BF_ArcMain_BF0, {121,   6, 102,  99}, { 54,  94}}, //1 idle 2
-	{BF_ArcMain_BF0, { 15, 113,  84, 105}, { 54,  96}}, //2 idle 3
-	{BF_ArcMain_BF0, {118, 110,  83, 107}, { 54,  98}}, //3 idle 4
-	{BF_ArcMain_BF1, { 20,   3,  83, 109}, { 54,  98}}, //4 idle 5
+	{BF_ArcMain_BF0, { 10,   7,  95,  97}, { 54,  84}}, //0 idle 1
+	{BF_ArcMain_BF0, {121,   6,  85, 103}, { 54,  91}}, //1 idle 2
+	{BF_ArcMain_BF0, { 15, 113,  84, 105}, { 54,  92}}, //2 idle 3
+	{BF_ArcMain_BF0, {118, 110,  83, 108}, { 54,  95}}, //3 idle 4
+	{BF_ArcMain_BF1, { 20,   3,  83, 109}, { 54,  96}}, //4 idle 5
 	
 	{BF_ArcMain_BF1, {121,   4,  89, 106}, { 54,  92}}, //5 left 1
 	{BF_ArcMain_BF1, { 13, 113,  87, 106}, { 54,  92}}, //6 left 2
 	
-	{BF_ArcMain_BF1, {118, 129,  90,  88}, { 54, 69}}, //7 down 1
-	{BF_ArcMain_BF2, { 10,   7,  89,  88}, { 54, 69}}, //8 down 2
+	{BF_ArcMain_BF1, {118, 129,  90,  88}, { 54, 72}}, //7 down 1
+	{BF_ArcMain_BF2, { 10,   7,  89,  88}, { 54, 72}}, //8 down 2
 	
 	{BF_ArcMain_BF2, {115,   0,  88, 112}, { 43,  98}}, //9 up 1
 	{BF_ArcMain_BF2, {  6, 120,  89, 111}, { 43,  98}}, //10 up 2
@@ -119,6 +119,21 @@ static const CharFrame char_bf_frame[] = {
 	
 	{BF_ArcMain_BF6, {  8, 177, 132,  59}, { 52, 69}}, //26 right miss 1
 	{BF_ArcMain_BF6, {148, 177, 100,  59}, { 59, 69}}, //27 right miss 2
+
+	{BF_ArcMain_Dead0, {  0,   0,  99, 103}, { 54,  96}}, //28 dead0 0
+	{BF_ArcMain_Dead0, {134,   0,  99, 103}, { 54,  96}}, //29 dead0 1
+	{BF_ArcMain_Dead0, {  5, 128,  99, 103}, { 54,  96}}, //30 dead0 2
+	{BF_ArcMain_Dead0, {136, 128,  99, 103}, { 54,  96}}, //31 dead0 3
+	
+	{BF_ArcDead_Dead1, {  0,   0,  99, 103}, { 54,  96}}, //32 dead1 0
+	{BF_ArcDead_Dead1, {134,   0,  99, 103}, { 54,  96}}, //33 dead1 1
+	{BF_ArcDead_Dead1, {  5, 128,  99, 103}, { 54,  96}}, //34 dead1 2
+	{BF_ArcDead_Dead1, {136, 128,  99, 103}, { 54,  96}}, //35 dead1 3
+	
+	{BF_ArcDead_Dead2, {  0,   0,  99, 103}, { 54,  96}}, //36 dead2 body twitch 0
+	{BF_ArcDead_Dead2, {134,   0,  99, 103}, { 54,  96}}, //37 dead2 body twitch 1
+	{BF_ArcDead_Dead2, {  5, 128,  99, 103}, { 54,  96}}, //38 dead2 balls twitch 0
+	{BF_ArcDead_Dead2, {136, 128,  99, 103}, { 54,  96}}, //39 dead2 balls twitch 1
 };
 
 static const Animation char_bf_anim[PlayerAnim_Max] = {
@@ -140,15 +155,15 @@ static const Animation char_bf_anim[PlayerAnim_Max] = {
 	{2, (const u8[]){13, 14, 15, ASCR_BACK, 1}},         //PlayerAnim_Peace
 	{2, (const u8[]){16, 17, 18, 19, ASCR_REPEAT}},      //PlayerAnim_Sweat
 	
-	{5, (const u8[]){23, 24, 25, 26, 26, 26, 26, 26, 26, 26, ASCR_CHGANI, PlayerAnim_Dead1}}, //PlayerAnim_Dead0
-	{5, (const u8[]){26, ASCR_REPEAT}},                                                       //PlayerAnim_Dead1
-	{3, (const u8[]){27, 28, 29, 30, 30, 30, 30, 30, 30, 30, ASCR_CHGANI, PlayerAnim_Dead3}}, //PlayerAnim_Dead2
-	{3, (const u8[]){30, ASCR_REPEAT}},                                                       //PlayerAnim_Dead3
+	{5, (const u8[]){28, 28, 28, 29, 29, 29, 30, 30, 30, 30, ASCR_CHGANI, PlayerAnim_Dead1}}, //PlayerAnim_Dead0
+	{5, (const u8[]){31, ASCR_REPEAT}},                                                       //PlayerAnim_Dead1
+	{3, (const u8[]){32, 32, 32, 33, 33, 33, 34, 34, 34, 34, ASCR_CHGANI, PlayerAnim_Dead3}}, //PlayerAnim_Dead2
+	{3, (const u8[]){35, ASCR_REPEAT}},                                                       //PlayerAnim_Dead3
 	{3, (const u8[]){31, 32, 30, 30, 30, 30, 30, ASCR_CHGANI, PlayerAnim_Dead3}},             //PlayerAnim_Dead4
-	{3, (const u8[]){33, 34, 30, 30, 30, 30, 30, ASCR_CHGANI, PlayerAnim_Dead3}},             //PlayerAnim_Dead5
+	{3, (const u8[]){32, 32, 33, 33, 34, 34, 34, ASCR_CHGANI, PlayerAnim_Dead3}},             //PlayerAnim_Dead5
 	
-	{10, (const u8[]){30, 30, 30, ASCR_BACK, 1}}, //PlayerAnim_Dead4
-	{ 3, (const u8[]){33, 34, 30, ASCR_REPEAT}},  //PlayerAnim_Dead5
+	{10, (const u8[]){36, 36, 37, ASCR_BACK, 1}}, //PlayerAnim_Dead4
+	{ 3, (const u8[]){38, 38, 39, ASCR_REPEAT}},  //PlayerAnim_Dead5
 };
 
 //Boyfriend player functions

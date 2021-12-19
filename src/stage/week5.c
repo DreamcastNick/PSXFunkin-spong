@@ -47,7 +47,7 @@ void Back_Week5_DrawBG(StageBack *back)
 	RECT_FIXED snow_dst = {
 		FIXED_DEC(-350,1) - fx,
 		FIXED_DEC(44,1) - fy,
-		FIXED_DEC(570,1),
+		FIXED_DEC(680,1),
 		FIXED_DEC(27,1)
 	};
 	
@@ -63,12 +63,12 @@ void Back_Week5_DrawBG(StageBack *back)
 		RECT src;
 		RECT_FIXED dst;
 	} lbop_piece[] = {
-		{{0, 0, 80, 102}, {FIXED_DEC(-315,1), FIXED_DEC(-30,1), FIXED_DEC(80,1), FIXED_DEC(102,1)}},
-		{{175, 3, 74, 151}, {FIXED_DEC(-120,1), FIXED_DEC(-80,1), FIXED_DEC(74,1), FIXED_DEC(151,1)}},
-		{{81, 0, 70, 128}, {FIXED_DEC(30,1), FIXED_DEC(-70,1), FIXED_DEC(70,1), FIXED_DEC(128,1)}},
-		{{151, 0, 23, 132}, {FIXED_DEC(100,1), FIXED_DEC(-70,1), FIXED_DEC(23,1), FIXED_DEC(132,1)}},
-		{{0, 109, 41, 139}, {FIXED_DEC(123,1), FIXED_DEC(-69,1), FIXED_DEC(41,1), FIXED_DEC(139,1)}},
-		{{41, 126, 69, 130}, {FIXED_DEC(164,1), FIXED_DEC(-52,1), FIXED_DEC(69,1), FIXED_DEC(130,1)}},
+		{{0, 0, 106, 102}, {FIXED_DEC(-215,1), FIXED_DEC(-30,1), FIXED_DEC(80,1), FIXED_DEC(102,1)}},
+		{{0, 0,   0,   0}, {FIXED_DEC(-120,1), FIXED_DEC(-80,1), FIXED_DEC(74,1), FIXED_DEC(151,1)}},
+		{{0, 0,   0,   0}, {FIXED_DEC(30,1), FIXED_DEC(-70,1), FIXED_DEC(70,1), FIXED_DEC(128,1)}},
+		{{0, 0,   0,   0}, {FIXED_DEC(100,1), FIXED_DEC(-70,1), FIXED_DEC(23,1), FIXED_DEC(132,1)}},
+		{{0, 0,   0,   0}, {FIXED_DEC(123,1), FIXED_DEC(-69,1), FIXED_DEC(41,1), FIXED_DEC(139,1)}},
+		{{0, 0,   0,   0}, {FIXED_DEC(164,1), FIXED_DEC(-52,1), FIXED_DEC(69,1), FIXED_DEC(130,1)}},
 	};
 	
 	const struct Back_Week5_LowerBop *lbop_p = lbop_piece;

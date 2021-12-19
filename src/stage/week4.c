@@ -39,7 +39,7 @@ typedef struct
 } Back_Week4;
 
 //Henchmen animation and rects
-static const CharFrame henchmen_frame[] = {
+static const CharFrame henchmen_frame[10] = {
 	{0, {  0,   0,  99,  99}, { 71,  98}}, //0 left 1
 	{0, { 99,   0,  99,  98}, { 71,  97}}, //1 left 2
 	{0, {  0,  99,  98,  97}, { 69,  95}}, //2 left 3
@@ -53,9 +53,9 @@ static const CharFrame henchmen_frame[] = {
 	{1, {163, 101,  64,  90}, { 26,  89}}, //9 right 5
 };
 
-static const Animation henchmen_anim[] = {
-	{1, (const u8[]){0, 0, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4, ASCR_BACK, 1}}, //Left
-	{1, (const u8[]){5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, ASCR_BACK, 1}}, //Right
+static const Animation henchmen_anim[2] = {
+	{2, (const u8[]){0, 1, 1, 2, 2, 3, 4, ASCR_BACK, 1}}, //Left
+	{2, (const u8[]){5, 6, 6, 7, 7, 8, 9, ASCR_BACK, 1}}, //Right
 };
 
 //Henchmen functions
@@ -194,15 +194,15 @@ void Back_Week4_DrawBG(StageBack *back)
 	Stage_DrawTex(&this->tex_back1, &bglimo_src, &bglimo_dst, stage.camera.bzoom);
 	
 	//Draw sunset
-	fx = stage.camera.x >> 4;
-	fy = stage.camera.y >> 4;
+	fx = stage.camera.x;
+	fy = stage.camera.y;
 	
 	RECT sunset_src = {0, 0, 256, 256};
 	RECT_FIXED sunset_dst = {
-		FIXED_DEC(-165 - SCREEN_WIDEOADD2,1) - fx,
-		FIXED_DEC(-140,1) - fy,
-		FIXED_DEC(340 + SCREEN_WIDEOADD,1),
-		FIXED_DEC(260,1)
+		FIXED_DEC(-295,1) - fx,
+		FIXED_DEC(-260,1) - fy,
+		FIXED_DEC(593,1),
+		FIXED_DEC(457,1)
 	};
 	
 	Stage_DrawTex(&this->tex_back2, &sunset_src, &sunset_dst, stage.camera.bzoom);
