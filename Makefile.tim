@@ -24,11 +24,15 @@ all: \
 	iso/older/main.arc \
 	iso/older2/main.arc \
 	iso/p1spong/main.arc \
+	iso/3dspong/main.arc \
 	iso/viacom/main.arc \
+	iso/mistake/main.arc \
+	iso/billy/main.arc \
 	iso/gf/main.arc \
 	iso/gf/speaker.tim \
 	iso/gf2/main.arc \
 	iso/gf2/speaker.tim \
+	iso/week0/back.arc \
 	iso/week1/back.arc \
 	iso/week2/back.arc \
 	iso/week3/back.arc \
@@ -104,6 +108,18 @@ iso/p1spong/main.arc: iso/p1spong/idle0.tim iso/p1spong/idle1.tim iso/p1spong/id
 
 # Viacom
 iso/viacom/main.arc: iso/viacom/idle.tim iso/viacom/left.tim iso/viacom/down.tim iso/viacom/up.tim iso/viacom/right.tim
+
+# Mistake
+iso/mistake/main.arc: iso/mistake/idle0.tim iso/mistake/idle1.tim iso/mistake/idle2.tim iso/mistake/idle3.tim iso/mistake/idle4.tim iso/mistake/left0.tim iso/mistake/left1.tim iso/mistake/down0.tim iso/mistake/down1.tim iso/mistake/up0.tim iso/mistake/up1.tim iso/mistake/right0.tim iso/mistake/right1.tim
+
+# Billy
+iso/billy/main.arc: iso/billy/idle0.tim iso/billy/idle1.tim iso/billy/idle2.tim iso/billy/idle3.tim iso/billy/idle4.tim iso/billy/idle5.tim iso/billy/left0.tim iso/billy/left1.tim iso/billy/down0.tim iso/billy/down1.tim iso/billy/up0.tim iso/billy/up1.tim iso/billy/right0.tim iso/billy/right1.tim
+
+# 3DSpong
+iso/3dspong/main.arc: iso/3dspong/idle0.tim iso/3dspong/idle1.tim iso/3dspong/idle2.tim iso/3dspong/left0.tim iso/3dspong/left1.tim iso/3dspong/down0.tim iso/3dspong/down1.tim iso/3dspong/up0.tim iso/3dspong/up1.tim iso/3dspong/right0.tim iso/3dspong/right1.tim
+
+# Week 0
+iso/week0/back.arc: iso/week0/back0.tim iso/week0/back1.tim iso/week0/back2.tim
 
 # Week 1
 iso/week1/back.arc: iso/week1/back0.tim iso/week1/back1.tim

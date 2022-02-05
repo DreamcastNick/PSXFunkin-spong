@@ -40,6 +40,12 @@
 				<file name = "hud0weeb.tim" type = "data" source = "iso/stage/hud0weeb.tim"/>
 			</dir>
 			
+			<!-- Week 0 assets -->
+			<dir name = "week0">
+				<!-- Background art -->
+				<file name = "back.arc" type = "data" source = "iso/week0/back.arc"/>
+			</dir>	
+			
 			<!-- Week 1 assets -->
 			<dir name = "week1">
 				<!-- Background art -->
@@ -85,6 +91,8 @@
 				<file name = "2.3n.cht" type = "data" source = "iso/chart/monster.json.cht"/>
 				<file name = "2.3h.cht" type = "data" source = "iso/chart/monster-hard.json.cht"/>
 				<!-- Clucked charts -->
+				<file name = "2.4e.cht" type = "data" source = "iso/chart/clucked-easy.json.cht"/>
+				<file name = "2.4n.cht" type = "data" source = "iso/chart/clucked.json.cht"/>
 				<file name = "2.4h.cht" type = "data" source = "iso/chart/clucked-hard.json.cht"/>
 			</dir>
 			
@@ -239,7 +247,6 @@
 				<file name = "bfdead.arc" type = "data" source = "iso/bf/dead.arc"/>
 				<file name = "bfmic.arc" type = "data" source = "iso/bfmic/main.arc"/>
 				<file name = "micded.arc" type = "data" source = "iso/bfmic/dead.arc"/>
-				<file name = "bfweeb.arc" type = "data" source = "iso/bf/weeb.arc"/>
 
 				<!-- Spong assets -->
 				<file name = "spong.arc" type = "data" source = "iso/spong/main.arc"/>				
@@ -283,6 +290,15 @@
 				<!-- Viacom assets -->
 				<file name = "viacom.arc" type = "data" source = "iso/viacom/main.arc"/>
 
+				<!-- Mistake assets -->
+				<file name = "mistake.arc" type = "data" source = "iso/mistake/main.arc"/>
+				
+				<!-- Billy assets -->
+				<file name = "billy.arc" type = "data" source = "iso/billy/main.arc"/>
+				
+				<!-- 3DSpong assets -->
+				<file name = "3dspong.arc" type = "data" source = "iso/3dspong/main.arc"/>
+				
 				<!-- Girlfriend assets -->
 				<file name = "gf.arc" type = "data" source = "iso/gf/main.arc"/>
 				<file name = "speaker.tim" type = "data" source = "iso/gf/speaker.tim"/>

@@ -4,12 +4,12 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef PSXF_GUARD_XMASBF_H
-#define PSXF_GUARD_XMASBF_H
+#ifndef _3DSPONG_H
+#define _3DSPONG_H
 
-#include "../player.h"
+#include "../character.h"
 
-//Christmas Boyfriend player functions
-Character *Char_XmasBF_New(fixed_t x, fixed_t y);
+//Clucky character functions
+Character *Char_3DSpong_New(fixed_t x, fixed_t y);
 
 #endif

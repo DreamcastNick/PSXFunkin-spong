@@ -4,12 +4,12 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef PSXF_GUARD_BFWEEB_H
-#define PSXF_GUARD_BFWEEB_H
+#ifndef _WEEK0_H
+#define _WEEK0_H
 
-#include "../player.h"
+#include "../stage.h"
 
-//Boyfriend Weeb player functions
-Character *Char_BFWeeb_New(fixed_t x, fixed_t y);
+//Week 2 functions
+StageBack *Back_Week0_New();
 
 #endif

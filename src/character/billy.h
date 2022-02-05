@@ -4,12 +4,12 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef PSXF_GUARD_GFWEEB_H
-#define PSXF_GUARD_GFWEEB_H
+#ifndef _BILLY_H
+#define _BILLY_H
 
 #include "../character.h"
 
-//GF Weeb character functions
-Character *Char_GFWeeb_New(fixed_t x, fixed_t y);
+//Clucky character functions
+Character *Char_Billy_New(fixed_t x, fixed_t y);
 
 #endif

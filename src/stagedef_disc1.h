@@ -127,6 +127,22 @@
 		
 		StageId_2_3, 0
 	},
+	{ //StageId_2_4 (Clucked)
+		//Characters
+		{Char_BF_New,    FIXED_DEC(70,1),  FIXED_DEC(109,1)},
+		{Char_3DSpong_New, FIXED_DEC(-60,1),  FIXED_DEC(112,1)},
+		{Char_GF_New,     FIXED_DEC(0,1),  FIXED_DEC(-10,1)},
+		
+		//Stage background
+		Back_Week0_New,
+		
+		//Song info
+		{FIXED_DEC(25,10),FIXED_DEC(3,1),FIXED_DEC(35,10)},
+		2, 4,
+		XA_Clucked, 2,
+		
+		StageId_2_4, 0
+	},
 	
 	{ //StageId_3_1 (Pico)
 		//Characters
@@ -257,4 +273,20 @@
 		XA_Cocoa, 0,
 		
 		StageId_5_2, 0
+	},
+	{ //StageId_5_2 (Eggnog)
+		//Characters
+		{Char_Mistake_New,  FIXED_DEC(100,1),   FIXED_DEC(50,1)},
+		{Char_Billy_New, FIXED_DEC(-190,1),   FIXED_DEC(50,1)},
+		{NULL},
+		
+		//Stage background
+		Back_Dummy_New,
+		
+		//Song info
+		{FIXED_DEC(2,1),FIXED_DEC(3,1),FIXED_DEC(4,1)},
+		5, 2,
+		XA_Eggnog, 2,
+		
+		StageId_5_3, 0
 	},

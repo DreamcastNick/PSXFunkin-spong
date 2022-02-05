@@ -18,6 +18,7 @@ SRCS = src/main.c \
        src/psx/timer.c \
        src/psx/movie.c \
        src/stage/dummy.c \
+       src/stage/week0.c \
        src/stage/week1.c \
        src/stage/week2.c \
        src/stage/week3.c \
@@ -31,7 +32,6 @@ SRCS = src/main.c \
        src/character.c \
        src/character/bf.c \
        src/character/bfmic.c \
-       src/character/bfweeb.c \
        src/character/speaker.c \
        src/character/spong.c \
        src/character/spong2.c \
@@ -46,10 +46,12 @@ SRCS = src/main.c \
        src/character/older.c \
        src/character/older2.c \
        src/character/p1spong.c \
+       src/character/3dspong.c \
        src/character/viacom.c \
+       src/character/mistake.c \
+       src/character/billy.c \
        src/character/gf.c \
        src/character/gf2.c \
-       src/character/gfweeb.c \
        src/object.c \
        src/object/combo.c \
        src/object/splash.c \

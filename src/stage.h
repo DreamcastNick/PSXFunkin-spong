@@ -46,6 +46,7 @@ typedef enum
 	StageId_2_1, //Spookeez
 	StageId_2_2, //South
 	StageId_2_3, //Monster
+	StageId_2_4, //Clucked
 	
 	StageId_3_1, //Pico
 	StageId_3_2, //Philly
@@ -79,12 +80,10 @@ typedef enum
 	StageId_Clwn_3, //Hellclown
 	StageId_Clwn_4, //Expurgation
 	
-	StageId_2_4, //Clucked
-	
 	StageId_Max
 } StageId;
 
-#define StageId_LastVanilla StageId_5_1
+#define StageId_LastVanilla StageId_5_2
 
 typedef enum
 {

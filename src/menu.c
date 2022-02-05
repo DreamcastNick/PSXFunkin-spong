@@ -824,6 +824,7 @@ void Menu_Tick(void)
 				{StageId_2_1, 0xFFD2D200, "DONKEY NOISE"},
 				{StageId_2_2, 0xFFD2D200, "HELL NAH"},
 				{StageId_2_3, 0xFFD2D200, "IP"},
+				{StageId_2_4, 0xFFD2D200, "BICUBIC"},
 				{StageId_4_1, 0xFFD2D23E, "SPONG OLD"},
 				{StageId_4_2, 0xFFD2D23E, "ABSORB OLD"},
 				{StageId_4_3, 0xFFD2D23E, "ABRASIVE OLD"},
@@ -832,6 +833,7 @@ void Menu_Tick(void)
 				{StageId_3_2, 0xFF363636, "ABSORB OLDER"},
 				{StageId_3_3, 0xFF363636, "PINEAPPLED OLDER"},
 				{StageId_5_1, 0xFF1E2185, "COPYRIGHT EVASION"},
+				{StageId_5_2, 0xFF000000, "BORN"},
 			};
 			
 			//Initialize page
