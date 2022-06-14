@@ -4,22 +4,6 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 
-#ifndef MEME
-	#ifdef __cplusplus
-		#define MEME 0
-	#else
-	#define MEME ((void *)0)
-	#endif
-#endif
-
-#ifndef OHNO
-	#ifdef __cplusplus
-		#define OHNO 0
-	#else
-	#define OHNO ((void *)0)
-	#endif
-#endif
-
 #include "menu.h"
 
 #include "mem.h"
@@ -39,6 +23,9 @@
 
 #include "stage.h"
 #include "character/gf2.h"
+
+#define meme ((void *)1)
+#define ohno ((void *)2)
 
 //Menu messages
 static const char *funny_messages[][2] = {
@@ -148,7 +135,7 @@ static struct
 	} page_param;
 	
 	//Menu assets
-	Gfx_Tex tex_back, tex_ng, tex_story, tex_title;
+	Gfx_Tex tex_back, tex_ng, tex_story, tex_title, tex_icon;
 	FontData font_bold, font_arial;
 	
 	Character *gf; //Title Girlfriend
@@ -219,6 +206,27 @@ static const char *Menu_LowerIf(const char *text, boolean lower)
 	return menu_text_buffer;
 }
 
+//draw icons
+static void Menu_DrawHealth(u32 x, u32 y, u8 i)
+{	
+	//Get src and dst
+	RECT src = {
+	     (i % 7) * 36,
+	     (i / 7) * 36,
+         36,
+	     36
+	};
+	RECT dst = {
+		x,
+		y,
+		38,
+		38
+	};
+	
+	//Draw health icon
+	Gfx_DrawTex(&menu.tex_icon, &src, &dst);
+}
+
 static void Menu_DrawBack(boolean flash, s32 scroll, u8 r0, u8 g0, u8 b0, u8 r1, u8 g1, u8 b1)
 {
 	RECT back_src = {0, 0, 255, 255};
@@ -276,8 +284,20 @@ static void Menu_DrawWeek(const char *week, s32 x, s32 y)
 	//Draw label
 	if (week == NULL)
 	{
-		//Tutorial
+		//Spong
 		RECT label_src = {0, 0, 112, 32};
+		Gfx_BlitTex(&menu.tex_story, &label_src, x, y);
+	}
+	else if (week == meme)
+	{
+		//Meme
+		RECT label_src = {0, 64, 83, 25};
+		Gfx_BlitTex(&menu.tex_story, &label_src, x, y);
+	}
+	else if (week == ohno)
+	{
+		//OHNO
+		RECT label_src = {100, 64, 96, 32};
 		Gfx_BlitTex(&menu.tex_story, &label_src, x, y);
 	}
 	else
@@ -309,6 +329,7 @@ void Menu_Load(MenuPage page)
 	Gfx_LoadTex(&menu.tex_ng,    Archive_Find(menu_arc, "ng.tim"),    0);
 	Gfx_LoadTex(&menu.tex_story, Archive_Find(menu_arc, "story.tim"), 0);
 	Gfx_LoadTex(&menu.tex_title, Archive_Find(menu_arc, "title.tim"), 0);
+	Gfx_LoadTex(&menu.tex_icon, Archive_Find(menu_arc, "icon.tim"), 0);
 	Mem_Free(menu_arc);
 	
 	FontData_Load(&menu.font_bold, Font_Bold);
@@ -690,10 +711,10 @@ void Menu_Tick(void)
 				const char *tracks[5];
 			} menu_options[] = {
 				{NULL, StageId_1_1, "ITS SPONG NOT SPONGEBOB", {"SPONG", "ABSORB", "ABRASIVE", "BIBULUS", "SERPENT"}},
-				{"1", StageId_2_1, "BMV AND MARCY COLLAB", {"DONKEY NOISE", "HELL NAH", "IP", NULL, NULL}},
+				{meme, StageId_2_1, "BMV AND MARCY COLLAB", {"DONKEY NOISE", "HELL NAH", "IP", NULL, NULL}},
 				{"3", StageId_4_1, "DESTROYER OF WORLDS", {"SPONG OLD", "ABSORB OLD", "ABRASIVE OLD", "PINEAPPLED OLD", NULL}},
 				{"7", StageId_3_1, "FIRST STEPS", {"SPONG OLDER", "ABSORB OLDER", "PINEAPPLED OLDER", NULL, NULL}},
-				{"2", StageId_5_1, "A VIACOM PRODUCTION", {"COPYRIGHT EVASION", NULL, NULL, NULL, NULL}},
+				{ohno, StageId_5_1, "A VIACOM PRODUCTION", {"COPYRIGHT EVASION", NULL, NULL, NULL, NULL}},
 			};
 			
 			//Initialize page
@@ -815,25 +836,26 @@ void Menu_Tick(void)
 				StageId stage;
 				u32 col;
 				const char *text;
+				u8 icon
 			} menu_options[] = {
-				{StageId_1_1, 0xFFD2D256, "SPONG"},
-				{StageId_1_2, 0xFFD2D256, "ABSORB"},
-				{StageId_1_3, 0xFFD2D256, "ABRASIVE"},
-				{StageId_1_4, 0xFFD2D256, "BIBULUS"},
-				{StageId_1_5, 0xFFD2D256, "SERPENT"},
-				{StageId_2_1, 0xFFD2D200, "DONKEY NOISE"},
-				{StageId_2_2, 0xFFD2D200, "HELL NAH"},
-				{StageId_2_3, 0xFFD2D200, "IP"},
-				{StageId_2_4, 0xFFD2D200, "BICUBIC"},
-				{StageId_4_1, 0xFFD2D23E, "SPONG OLD"},
-				{StageId_4_2, 0xFFD2D23E, "ABSORB OLD"},
-				{StageId_4_3, 0xFFD2D23E, "ABRASIVE OLD"},
-				{StageId_4_4, 0xFFD2D23E, "PINEAPPLED OLD"},
-				{StageId_3_1, 0xFF363636, "SPONG OLDER"},
-				{StageId_3_2, 0xFF363636, "ABSORB OLDER"},
-				{StageId_3_3, 0xFF363636, "PINEAPPLED OLDER"},
-				{StageId_5_1, 0xFF1E2185, "COPYRIGHT EVASION"},
-				{StageId_5_2, 0xFF000000, "BORN"},
+				{StageId_1_1, 0xFFD2D256, "SPONG", 1},
+				{StageId_1_2, 0xFFD2D256, "ABSORB", 1},
+				{StageId_1_3, 0xFFD2D256, "ABRASIVE", 2},
+				{StageId_1_4, 0xFFD2D256, "BIBULUS", 3},
+				{StageId_1_5, 0xFFD2D256, "SERPENT", 4},
+				{StageId_2_1, 0xFFD2D200, "DONKEY NOISE", 5},
+				{StageId_2_2, 0xFFD2D200, "HELL NAH", 6},
+				{StageId_2_3, 0xFFD2D200, "IP", 7},
+				{StageId_2_4, 0xFFD2D200, "BICUBIC", 17},
+				{StageId_4_1, 0xFFD2D23E, "SPONG OLD", 8},
+				{StageId_4_2, 0xFFD2D23E, "ABSORB OLD", 8},
+				{StageId_4_3, 0xFFD2D23E, "ABRASIVE OLD", 9},
+				{StageId_4_4, 0xFFD2D23E, "PINEAPPLED OLD", 10},
+				{StageId_3_1, 0xFF363636, "SPONG OLDER", 11},
+				{StageId_3_2, 0xFF363636, "ABSORB OLDER", 11},
+				{StageId_3_3, 0xFF363636, "PINEAPPLED OLDER", 12},
+				{StageId_5_1, 0xFF1E2185, "COPYRIGHT EVASION", 14},
+				{StageId_5_2, 0xFF000000, "BORN", 15},
 			};
 			
 			//Initialize page
@@ -907,6 +929,8 @@ void Menu_Tick(void)
 				if (y >= SCREEN_HEIGHT2 + 8)
 					break;
 				
+				Menu_DrawHealth(strlen(menu_options[i].text) * 14 + 48 + (y >> 2), SCREEN_HEIGHT2 + y - 20, menu_options[i].icon);
+				
 				//Draw text
 				menu.font_bold.draw(&menu.font_bold,
 					Menu_LowerIf(menu_options[i].text, menu.select != i),
@@ -967,6 +991,8 @@ void Menu_Tick(void)
 				{StageId_Clwn_1, "   OG KE VERSION", false},
 				{StageId_Clwn_1, "FINGONZ", false},
 				{StageId_Clwn_1, "   CHARTED MISSING SONGS", false},
+				{StageId_Clwn_1, "PENNY THE PROTOGEN", false},
+				{StageId_Clwn_1, "   CHARTED BICUBIC", false},
 				{StageId_Clwn_1, "IGORSOU", false},
 				{StageId_Clwn_1, "   ADDITIONAL HELP", false},
 				{StageId_Clwn_1, "UNSTOPABLE", false},

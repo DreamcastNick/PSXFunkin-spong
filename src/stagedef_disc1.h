@@ -44,7 +44,7 @@
 		1, 3,
 		XA_Dadbattle, 0,
 		
-		StageId_1_3, 0
+		StageId_1_4, 0
 	},
 	{ //StageId_1_4 (Tutorial)
 		//Characters
@@ -60,7 +60,7 @@
 		1, 4,
 		XA_Tutorial, 2,
 		
-		StageId_1_4, 0
+		StageId_1_5, 0
 	},
 	{ //StageId_1_5 (Serpent)
 		//Characters
@@ -239,7 +239,7 @@
 		4, 3,
 		XA_MILF, 0,
 		
-		StageId_4_3, 0
+		StageId_4_4, 0
 	},
 	{ //StageId_4_4 (Test)
 		//Characters
@@ -272,7 +272,7 @@
 		5, 1,
 		XA_Cocoa, 0,
 		
-		StageId_5_2, 0
+		StageId_5_1, 0
 	},
 	{ //StageId_5_2 (Eggnog)
 		//Characters
@@ -288,5 +288,5 @@
 		5, 2,
 		XA_Eggnog, 2,
 		
-		StageId_5_3, 0
+		StageId_5_2, 0
 	},

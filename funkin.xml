@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Defines the ISO project -->
-<iso_project image_name="funkin.bin" cue_sheet="funkin.cue" no_xa="0">
+<iso_project image_name="spong.bin" cue_sheet="spong.cue" no_xa="0">
 	<!-- Data track -->
 	<track type="data">
 		<!-- Identifiers -->
 		<identifiers
 			system        = "PLAYSTATION"
 			application   = "PLAYSTATION"
-			volume        = "PSXFUNKIN"
-			volume_set    = "PSXFUNKIN"
+			volume        = "PSXSPONG"
+			volume_set    = "PSXSPONG"
 			publisher     = "CUCKYDEV"
 			copyright     = "NINJAMUFFIN99"
 		/>
